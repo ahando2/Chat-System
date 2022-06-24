@@ -1,3 +1,5 @@
+import java.net.URL;
+import java.nio.file.Paths;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
@@ -15,8 +17,8 @@ public class chatGUI extends Application {
 		try {
 			// Read file fxml and draw interface.
 			// set the start page
-			Parent root = FXMLLoader.load(getClass()
-					.getResource("/FXML/startFXML.fxml"));
+			URL url = Paths.get("../resources/FXML/startFXML.fxml").toUri().toURL();
+			Parent root = FXMLLoader.load(url);
 			// if stage is closed
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 				@Override
@@ -29,7 +31,6 @@ public class chatGUI extends Application {
 
 			primaryStage.setTitle("chat system");
 			Scene s = new Scene(root, 800,600);
-			s.getStylesheets().add("/styles/style.css");
 			primaryStage.setScene(s);
 			primaryStage.show();
 

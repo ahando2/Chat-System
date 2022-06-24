@@ -1,3 +1,4 @@
+import java.nio.file.Paths;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
@@ -80,7 +81,8 @@ public class controller implements Initializable {
     // action button for server button, go to server scene
     public void serverAction(ActionEvent e) throws IOException {
         //get instance of the loader class
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/serverFXML.fxml"));
+        URL url = Paths.get("../resources/FXML/serverFXML.fxml").toUri().toURL();
+        FXMLLoader loader = new FXMLLoader(url);
         serverBox = loader.load(); //load view into parent
         controller ctr = loader.getController();// get the controller of the parent
 
@@ -96,7 +98,8 @@ public class controller implements Initializable {
 
     // action button for client button, go to client scene
     public void clientAction(ActionEvent t) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/clientFXML.fxml"));
+        URL url = Paths.get("../resources/FXML/clientFXML.fxml").toUri().toURL();
+        FXMLLoader loader = new FXMLLoader(url);
         clientBox = loader.load(); //load view into parent
         controller ctr = loader.getController();// get the controller of the parent
 
@@ -248,7 +251,8 @@ public class controller implements Initializable {
 
     // if server is down or not open, set to error scene then quit
     public void errorAction(ActionEvent e,controller ctr) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/errorFXML.fxml"));
+        URL url = Paths.get("../resources/FXML/errorFXML.fxml").toUri().toURL();
+        FXMLLoader loader = new FXMLLoader(url);
         errorBox = loader.load(); //load view into parent
         try {
             ctr.clientBox.getScene().setRoot(errorBox);//update scene graph
