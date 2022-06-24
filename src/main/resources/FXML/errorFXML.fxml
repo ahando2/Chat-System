@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="errorBox" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" styleClass="vbox" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+   <children>
+      <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textDefault" text="Server is down :(  Exiting..." wrappingWidth="174.0">
+         <font>
+            <Font name="Tahoma Bold" size="15.0" />
+         </font>
+      </Text>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="clientBox" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" styleClass="vbox" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+   <children>
+      <HBox fx:id="idBox" prefHeight="20.0" prefWidth="700.0">
+         <children>
+            <Label fx:id="idText" style="-fx-text-fill: rgb(234,161,151); -fx-font-weight: bold;" styleClass="labelDefault" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox fx:id="listBox" prefHeight="400.0" prefWidth="700.0" spacing="10.0">
+         <children>
+            <VBox fx:id="clientListBox" prefHeight="400.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="clientList" prefHeight="400.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="chatBox" prefHeight="400.0" prefWidth="440.0" spacing="5.0">
+               <children>
+                  <ListView fx:id="chatList" prefHeight="435.0" prefWidth="440.0" />
+                  <HBox fx:id="sendBox" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="message" prefHeight="31.0" prefWidth="406.0" styleClass="textfield" stylesheets="@../styles/style.css" />
+                        <Button fx:id="sendBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" styleClass="sendbutton" text="&gt;" textFill="#343434">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+   </padding>
+</VBox>
